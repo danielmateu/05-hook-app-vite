@@ -7,7 +7,7 @@ export const MultipleCustomHooks = () => {
 
     const { counter, suma, resta } = useCounter(1);
 
-    const { data, isLoading, hasError } = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`);
+    const { data, isLoading } = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`);
 
     const { author, quote } = !!data && data[0]; //Si la data tiene valor, toma la de la posicion 0!
 
